@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VRsolución: Envíos a todo el país.">
+    <title>VRsolución</title>
+    <link rel="shortcut icon" href="img/32x32.jpeg" class="icon">
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    }
+    .icon-text{
+      position: relative;
+      margin-right: 0.5em;
+    align-items: center;}
+
+      .icon-textb{
+        position: relative;
+        margin-right: 0.5em;
+      align-items: center;}
+
+        .icon-textc{
+          position: relative;
+          margin-right: 0.5em;
+        align-items: center;}
+
+          .icon-textd{
+            position: relative;
+            margin-right: 0.5em;
+          align-items: center;}
+            .icon-texte{
+              position: relative;
+              margin-right: 0.5em;
+            align-items: center;}
+
+    body {
+      padding: 0;
+      margin: 0;
+        font-family: cursive;
+        background-image: rgba(0, 0, 0, 0.5);
+        background-image:url('img/fondo.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #786465;
+    }
+    img{
+      border-radius: 50%;
+      position: relative;
+      left: 40px
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px;
+      background-color: #786465;
+      color: #eee9e3;
+    }
+
+    .navbar{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 16px 64px;
+    }
+
+    .nav-links{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      transition: all 0.5s ease;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+        background-color: #bb9b8a ;
+
+    }
+    .nav-links li{
+      margin-left: 24px
+    }
+
+    .nav-links a{
+      text-decoration: none;
+      color: #eee9e3;
+      font-size: 17px;
+      padding: 8px 24px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+
+    }
+
+    .menu-icon{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-icon .line{
+      width: 30px;
+      height: 3px;
+      background-color: #eee9e3;
+      margin: 5px 0;
+      transition: all 0.3s ease
+    }
+
+    #menu-toggle{
+       display: none;
+    }
+    @media(max-width:768px){
+      .navbar{
+        padding: 16px;
+      }
+      .menu-icon{
+        display: flex;
+      }
+      .nav-links{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: #bb9b8a;
+        text-align: center;
+        color: #eee9e3;
+      }
+      .nav-links li{
+        margin: 0;
+        padding: 20px 0;
+        width: 100%
+      }
+
+    .nav-links a{
+      width: 100%
+      padding: 10px 200px
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .nav-links{
+      height: 100vh;
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(1){
+      transform: rotate(45deg) translate(15px, 3px);
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(2){
+      transform: scale(0);
+    }
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(3){
+      transform: rotate(-45deg) translate(15px, -4px);
+    }
+    }
+
+    .content-box {
+      border-radius: 5%;
+      position: absolute;
+    top: 100%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #eaddcd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    max-width: 600px;
+    text-align: center;
+    color: #403738;
+}
+
+.content-box h1 {
+    font-size: 2em;
+    font-family: serif;
+    color: #786465;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.content-box .highlight {
+    font-weight: bold;
+    color: #786465;
+}
+.content-li{
+  font-size: 1.5;
+  font-family: serif;
+
+}
+h2{
+  position: absolute;
+  top: 250px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/logo.jpeg" width="225" height="225">
+            <h2>Tu compra sin complicaciones</h2>
+        </div>
+        <nav class="navbar">
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon"></label>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+
+            <ul class="nav-links">
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="Sobre.html">Sobre nosotros</a></li>
+              <li><a href="Pasos.html">Pasos para ordenar</a></li>
+              <li><a href="Informaciones.html">Información</a></li>
+              <li><a href="Contactanos.html">Contáctanos</a></li>
+        </nav>
+    </header>
+
+    <div class="content-box">
+    <h1>Pasos para ordenar</h1>
+
+<ol>
+<li class=".content-li">	Elige tu producto: Busca los artículos que deseas en Shein.</li>
+<img class="icon-text"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAMdJREFUaEPtlkESQDAQBPkrf/AEf+CvXJxSImpnsyrR7jtMz2ZiHBp/xsa/f8DA1wmSAAmIBFghEaA8TgIyQlGABESA8nj/CSzTfMiYbgTWfXOBVxTBQCY+ErjAFFeoxv57amLAk6ZFq/8EqNG/1Gia9Nt7ongGolaomgFLM1hmMGCh5jlDAjma6iFO28Rbr3oLYSBZjRRI/wl4Ns2TFi0URfpt27n9C0UZY4WiSHe7QlaAxXvAKhw1h4Eo0rn3kAAJiASaX6ETerNwMU7saR4AAAAASUVORK5CYII="/>
+<li class=".content-li">	Envía tu pedido: Envíanos el enlace/la captura del producto por WhatsApp o a través de nuestro formulario en línea.</li>
+<img class="icon-textb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABDtJREFUaEPtWV1oHFUU/s7dNEYq/hRUanxQKfapYv0BsYK+iA+2ihRR0GLp/KgP1f6kZmaNZBFxJ0tqpYI0M7N5Cb4JbbWiiFQfIiq29bn2RTAVfQmoLUlM9h6ZVO1kMnfmjtnt7kLu27L33Pt9e++533fOErp8UJfjxyqBdp/g6gl07Am4hrGFqXQE4BJA9YW5mSOjExMX2w04ub/yCjmmdRbAnbGA3wE+PMf87qF6fbpTiGQR+BXAzSlAZ8EYk8SjtTCcajcRNQHDOg7CExkA58H4QHLDq42PR6fVlpFBwN4L4nc0UDGAY1KKt2vjY6c05jd1ipJA2bLulowfErt9DWCLCgETviQpal597LOmosxYLFMHHNP6E8A1/8ZLKe6HaPQIoiEwHletS+BTTOT19fcfrVQqspVk8ggcA/DkZQA04IX+wejzoG1vEg0uM+FpAKV0kHQWzLXpEk34vj/fCiLZBIxEHhA+8YJgaxzIkGnePs/kEuEFAL0KkOfBdHDhrxm/2VqSQ8DYDBJnYqAu9N3af13atSjb9nrJfAAMG8DaNCIETDPovTluHG6WluR5IXJM6494HgB8nxeGp1XXYa9hrOsT4lVm7AZwg2LeRTDCZmhJHgE4CT0gwv5qEOQ+rwM7dqxd09v3MhP2AVivILJiLckl4JrmHgYd+g8A4yciPlANww91k9IxTRtMLgi3ZcQc/T9akkvAMZblwSIGBs4IwnA1CE7oEKlUKmLm51+eJWIHwKaMmJMgVL0g+EJn3VwCAFLyYMnS3zNheCQIPtXZcPEJNoxtRKIM4IGVaokOgWV5oNj0W0ga9sb9z3WJOKb5CIHKDDyqjsnWEi0Cy/IgEyF/Ay69WcROlG37HimlA1AkiqpxngRtr/r+d/EJWgRUeZDNA5NcInfE9yd1T+S1Xbs2CiFcgJ4D0JMS96MXBhsLE1AYu2xcjEkQv+GF4Ve6BBzD2MBUKhP4eQBrlsUxznn1IF5k6bVVCl8hYMgLw5MFgG8GxOsgbM+ImZJSPJW07HpXyLQSpi51m8JJ7FrWw2C4DDzWyiRu+jPqWtZWZrgAHmz5M5qRwKeJUCkiZLNTU89EsgLgrismZGlWgiFfGanXP9a+45GVgBgE+I6MmONSireKlqW5OZA0c8DloiaLQGTmeq66+iWAIzN3i2Juy81cYTtd2bnz+tme3j0E3s3AOgXwK2OnLykkx73/BS8Mrr3k5ZaOqKBpNHiACC92TEHjWtY+ZizWwP+ME14YbItD7+yS0rQ/AjgGuNuK+kRbRQi6d0HK3q5oqyje//zGVoO8IpZa9ylWC57iG8e09wM8qrFBZ7YWHdOKhGpJDyhBZsVvuMaPkzslq73+G4CbUlbokva6aZ0DsCFGoLv+4Bi07YdI8vsA3wiI0a77iyn38nXIhFwz1yE4lTBWCbT7hFZPoN0n8DePQCdPCXjr2QAAAABJRU5ErkJggg=="/>
+<li class=".content-li">	Confirma tu pedido: Te contactaremos para confirmar detalles y el total a pagar.</li>
+<img class="icon-textc" src="data:image/png;base64,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"/>
+<li class=".content-li">	Realiza el pago: Paga mediante transferencia bancaria o pago móvil.</li>
+<img class="icon-textd" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAyJJREFUaEPtmE1IFGEYx//PrOta+JHVLTwURWCHQAKDICKK7CJRSlRU6M4MiAlJ5M5SB2/OSmFUCM7MhuYlKA9dyqIPKAqCoJN9XDpUp4goFVK23SeWHJt119mdXd0ZY/c4+zzv+/89/+d9ZngJK/xHK1w/SgBuO5jmgCJK7LYou/1VQ0/RXAIotlv/vwMLK7rwTCyswFI74HS/rGPU6YKFAjndrwRQaMULbdllc8BpK5ggTvNKANYWOCfL6/1xnAR4FwhHUtuDryYSvtH+G0Ov7drONQdCQfk4EQ8BqLQ/FzzyXRAkTdNimeJcAQiJskLgvpwPNGNMjeotngBQRHEvQI9zFj8XyISmiK4/cH0KKaJ4H6Ami5BpMKKExO1APD4xVV5eVhZHI4ivEbDRjGPQlYihdXsAQJpK6XtONKjR6Jt0YeJRgG79e87jqmEc9ALADICAKaTid6y2d3j4h9OWcu09oIjye4C3WgQ/J8KlgN//pHdwcNopSNGnkBKUVBBCNkKTEF8I+AzCRzA/6jOMO4vFFx2g90RX9czqmWdgbM+12kx4usrvb87kUNEBkqKVjo5aisUeMmhHrhAAXs5WVe4bGBj4Zc1xBWBOAIWC8jGA9xAlxyXVAbzB7s3MoHDE0FSvACxa/J729iqfIOxnph4QGucDGa/UqL7T8wCmwAttbXVxX9mnecGESVXXa1wFUERpEkCVKSIBru83jHeZ7AhLUjMz7lr+m1INvdpVgLAojTNwwCLiK8BnWRDuRTTtZ/hU57p4+ewWAcJhgLsAVFjfGaqh73YXIL2qOQ8iBh+KGIbVEbgyhcKifJ3BnTkr/xt4UzX0065/CyUFtLa2+jbV1J4HOETAmiwg08R0pi+qjWSKc8UBU0h3MLg2QNQFpgYQmlMEMsYAehHzYfSypn3zzKfEUgkx13HVgUKmiecAHB7o+XDPOFACmKtAttvwZbuZ86wD+QrLN2/JHchXSL55hQNI0gQY9fkKKCiP8FbV9W12a2Q9A2FRbGFQ8tpwc0FiHCfTB0Liot0FQHLJrACO9y1yQgmgyAVP227FO/AHvuL7QOFvIwcAAAAASUVORK5CYII="/>
+<li class=".content-li">	Recibe tu pedido: Nosotros nos encargamos del resto. Te avisaremos cuando tu pedido esté listo para recoger o entregar.</li>
+<img class="icon-texte"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAfRJREFUaEPtWT1LA0EQfZNEexElitgK2lj6Q+ws/LpDsFcuYCnmOiub3MaIWPoztLZRwdoPEIm98WNFMaDJJTu73JwENu2+2Zn3Zt5dhiMM+I8GvH54Av/dQecOVIJgUaOwC+gZOxJ0Q/jYqSp1aheXjnYmEIXhFTRmnYogXMdJMucU2xGUSmBrZbNcHHpV0HoBoNEsEvHv0E1oOqePt6DaaDyZ4roIfBdfal0AVDYFy57T7Yt+n9+v15/75ekiEAXhCYAl2eK4t1MtVrUNWwIPACa4KWRxdBur2rQtAf07IFZJqk+iIPyDsyXCvbcXrp0vbYQ8AU43fAd+VHIeIY7KLphOb4l5wKU4TownYKsAR1UbjG1+7wEbdTlY3wFbBTiq2mBs84t6IJu9ov9+IEYg+70ifT8QIyCzV3TvB5IEBPaK7v1AkgDrb7nJ4CZTewK9FDQpZ1K+fW66x3fAd8AwS36ETCudHyE/Qh0KREF4D2CS+5zm4qRGMeU9EBwBtMwtjIvLjUBldXVMF0uXAMa5xXFwuRH4KmZ7bW2yQEUFwgKAEU6BJkyuBEzFcM6FvHQfq2Tqd37nb2QmElEg4CXCYZwk67kQEPDSHbWG56vHB81cCGTnJd0E6KwAvbGn1GNn58VGyDRiWZ17Alkp6XrPwHfgE/H4h0CJTFQ8AAAAAElFTkSuQmCC"/>
+        </div>
+
+</body>
+</html>

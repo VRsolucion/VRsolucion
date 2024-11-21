@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VRsolución: Envíos a todo el país.">
+    <title>VRsolución</title>
+    <link rel="shortcut icon" href="img/32x32.jpeg" class="icon">
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+        font-family: cursive;
+        background-image: rgba(0, 0, 0, 0.5);
+        background-image:url('img/fondo.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        opacity: 0.8;
+        color: #786465;
+    }
+    img{
+      border-radius: 50%;
+      position: relative;
+      left: 40px
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+        background-color: #786465;
+        color: #eee9e3;
+    }
+    li{
+      color: #786465;
+      font-size: 90%;
+      text-align: left;
+    }
+    h2{
+      position: absolute;
+      top: 250px;
+    }
+    .content-box {
+      border-radius: 5%;
+      position: absolute;
+    top: 130%;
+    left:50%;
+    width: 150%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #eaddcd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 40px 40px;
+    max-width: 900px;
+    text-align: center;
+    color: #403738;
+}
+
+.content-box h1 {
+    font-size: 2.5em;
+    color: #786465;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #403738;
+}
+
+.content-box .highlight {
+    font-weight: bold;
+    color: #786465;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+    .navbar{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 16px 64px;
+    }
+
+    .nav-links{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      transition: all 0.5s ease;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+        background-color: #bb9b8a ;
+
+    }
+    .nav-links li{
+      margin-left: 24px
+    }
+
+    .nav-links a{
+      text-decoration: none;
+      color: #eee9e3;
+      font-size: 17px;
+      padding: 8px 24px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+
+    }
+
+    .menu-icon{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-icon .line{
+      width: 30px;
+      height: 3px;
+      background-color: #eee9e3;
+      margin: 5px 0;
+      transition: all 0.3s ease
+    }
+
+    #menu-toggle{
+       display: none;
+    }
+    @media(max-width:768px){
+      .navbar{
+        padding: 16px;
+      }
+      .menu-icon{
+        display: flex;
+      }
+      .nav-links{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: #bb9b8a;
+        text-align: center;
+        color: #eee9e3;
+      }
+      .nav-links li{
+        margin: 0;
+        padding: 20px 0;
+        width: 100%
+      }
+
+    .nav-links a{
+      width: 100%
+      padding: 10px 200px
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .nav-links{
+      height: 100vh;
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(1){
+      transform: rotate(45deg) translate(15px, 3px);
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(2){
+      transform: scale(0);
+    }
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(3){
+      transform: rotate(-45deg) translate(15px, -4px);
+    }
+
+
+}
+.imagenab {
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 5%;
+  animation: aparecer1 3s infinite;
+}
+
+@keyframes aparecer1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.imagenabc {
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 5%;
+  animation: aparecer2 4s infinite;
+}
+
+@keyframes aparecer2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.imagenabd {
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 5%;
+  animation: aparecer3 5s infinite;
+}
+
+@keyframes aparecer3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.imagenabe {
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 5%;
+  animation: aparecer4 6s infinite;
+}
+
+@keyframes aparecer4 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.imagenabf {
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 5%;
+  animation: aparecer5 7s infinite;
+}
+
+@keyframes aparecer5 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.contenedor{
+  text-align: center;
+  display: flex; justify-content: center; align-items: center;
+  position: relative;
+  left: -3%;
+}
+
+p{
+  text-align: left;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/logo.jpeg" width="225" height="225">
+            <h2>Tu compra sin complicaciones</h2>
+        </div>
+        <nav class="navbar">
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon"></label>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+
+            <ul class="nav-links">
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="Sobre.html">Sobre nosotros</a></li>
+              <li><a href="Pasos.html">Pasos para ordenar</a></li>
+              <li><a href="Informaciones.html">Información</a></li>
+              <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+      <img src="img/imga.jpg.JPG" alt="Imagen 1" class="imagenab" width="175" height="175">
+      <img src="img/imgb.jpg.JPG" alt="Imagen 2" class="imagenabc" width="175" height="175">
+      <img src="img/imgc.jpg.JPG" alt="Imagen 2" class="imagenabd" width="175" height="175">
+      <img src="img/imgd.jpg.JPG" alt="Imagen 2" class="imagenabe" width="175" height="175">
+      <img src="img/imge.PNG" alt="Imagen 2" class="imagenabf" width="175" height="175">
+    </div>
+
+<div class="content-box">
+  <h1>Informaciones<h1>
+
+<h3>"VRsolución - Tu compra sin complicaciones".<h3>
+
+<p>Compra desde Shein:
+<ul>
+<li>Al mismo precio de la página, sin pagar por libra.</li>
+</ul>
+</p>
+
+<p>Facilitamos tus compras online:
+<ul>
+<li>Actualización de entrega de tu pedido todos los días, hasta que lo tengas en tus manos.</li>
+</ul>
+</p>
+
+
+<p>Políticas de la Empresa:
+
+<ul>
+<li>Depósito y Pago:
+ Se requiere un depósito de todo o el 80% del dinero para confirmar el pedido, el restante al recibir.</li>
+</ul>
+</p>
+
+
+<p>Entrega:
+<ul>
+<li>El tiempo estimado de entrega es de 8 a 15 días y en temporada alta de 15 a 20 días hábiles.</li>
+<li>Se hace entrega en puntos estratégicos, como supermercados, plazas, etc.</li>
+<li>Tambien se hace entrega por envio a todo el pais por las vias correspondientes, por ejemplo:
+  Domex,VimenPaq, entre otros; costo adicional por envio nacional</li>
+</ul>
+</p>
+
+<p>Cambios en el Pedido:
+<ul>
+<li>Los cambios en el pedido deben ser solicitados dentro de las primeras 3 horas después de confirmar la compra.</li>
+</ul>
+</p>
+
+<p>Cancelaciones:
+<ul>
+<li>Una vez que el pedido haya sido pagado, aceptamos cancelaciones dentro de las primeras 12 horas.</li>
+</ul>
+</p>
+</div>
+
+</body>
+</html>

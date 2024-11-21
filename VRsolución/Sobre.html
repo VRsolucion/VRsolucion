@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VRsolución: Envíos a todo el país.">
+    <title>VRsolución</title>
+    <link rel="shortcut icon" href="img/32x32.jpeg" class="icon">
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+        font-family: cursive;
+        background-image: rgba(0, 0, 0, 0.5);
+        background-image:url('img/fondo.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #786465;
+    }
+    img{
+      border-radius: 50%;
+      position: relative;
+      left: 40px;
+    }
+    .image{
+      position: relative;
+      left: 425px;
+    border-radius: 5%;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 80%{
+      transform: translateY(0);
+    }
+    50%{
+     transform: translateY(-50px);
+   }
+
+  }
+  h2{
+    position: absolute;
+    top: 250px;
+  }
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px;
+      background-color: #786465;
+      color: #eee9e3;}
+
+    li{
+      color: #eee9e3;
+    }
+
+    .content-box {
+      border-radius: 5%;
+      position: absolute;
+    top: 130%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #eaddcd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    max-width: 600px;
+    text-align: center;
+    color: #403738;
+}
+
+.content-box h1 {
+    font-size: 1.5em;
+    color: #786465;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.content-box .highlight {
+    font-weight: bold;
+    color: #786465;
+}
+
+    .navbar{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 16px 64px;
+    }
+
+    .nav-links{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      transition: all 0.5s ease;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+        background-color: #bb9b8a ;
+
+    }
+    .nav-links li{
+      margin-left: 24px
+    }
+
+    .nav-links a{
+      text-decoration: none;
+      color: #eee9e3;
+      font-size: 17px;
+      padding: 8px 24px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+
+    }
+
+    .menu-icon{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-icon .line{
+      width: 30px;
+      height: 3px;
+      background-color: #eee9e3;
+      margin: 5px 0;
+      transition: all 0.3s ease
+    }
+
+    #menu-toggle{
+       display: none;
+    }
+    @media(max-width:768px){
+      .navbar{
+        padding: 16px;
+      }
+      .menu-icon{
+        display: flex;
+      }
+      .nav-links{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: #bb9b8a;
+        text-align: center;
+        color: #eee9e3;
+      }
+      .nav-links li{
+        margin: 0;
+        padding: 20px 0;
+        width: 100%
+      }
+
+    .nav-links a{
+      width: 100%
+      padding: 10px 200px
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .nav-links{
+      height: 100vh;
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(1){
+      transform: rotate(45deg) translate(15px, 3px);
+    }
+
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(2){
+      transform: scale(0);
+    }
+    #menu-toggle:checked+ .menu-icon+ .line:nth-child(3){
+      transform: rotate(-45deg) translate(15px, -4px);
+    }
+
+    p{
+      white-space: pre;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/logo.jpeg" width="225" height="225">
+            <h2>Tu compra sin complicaciones</h2>
+        </div>
+        <nav class="navbar">
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon"></label>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+
+            <ul class="nav-links">
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="Sobre.html">Sobre nosotros</a></li>
+              <li><a href="Pasos.html">Pasos para ordenar</a></li>
+              <li><a href="Informaciones.html">Información</a></li>
+              <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img class=image src="img/paquetes.jpeg" width= 500 height=300>
+
+    <div class="content-box">
+            <h1>En VRsolución, transformamos tus compras en una experiencia sencilla y libre de complicaciones.</h1>
+            <p>
+                Somos especialistas en la gestión y procesamiento de pedidos de forma segura y eficiente,
+                con un enfoque particular en la tienda <strong>Shein</strong>. Nuestro servicio personalizado garantiza que
+                recibas tus productos favoritos sin estrés y con total confianza.
+            </p>
+            <p>
+                Nos apasiona simplificar el proceso de compra en línea, ahorrándote tiempo, dinero y preocupaciones.
+                Nuestro equipo se compromete a ofrecerte un servicio transparente, confiable y cercano,
+                manteniéndote informado/a en cada etapa: desde la confirmación del pedido hasta la entrega en tus manos.
+            </p>
+            <p class="highlight"><strong>Tu compra es nuestra prioridad. </strong> </p>
+            <p>En VRsolución, estamos aquí para que disfrutes de tus compras sin complicaciones ni contratiempos.</p>
+        </div>
+
+</body>
+</html>
